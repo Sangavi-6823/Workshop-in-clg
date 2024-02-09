@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demo App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-app="demo">
+    <div ng-controller="demoCtrl">
+      <div class="header">
+        <div class="titleContainer">
+          <img
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Fcompany-logo-png%2Fcompany-logo-transparent-png-19.png&f=1&nofb=1&ipt=d0636a0a7be77c80c8abc0282f757dc2b757599aa63c4a14724f3e78712ab2b5&ipo=images"
+            alt="logo"
+            class="logo"
+          />
+          <h1 class="title">{{title}}</h1>
+        </div>
+        <div class="profileContainer">
+          <img
+            src="data:image/png;base64,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"
+            class="logo"
+          />
+          <p>John Doe</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="formContainer">
+          <form name="employeeForm" class="employeeForm">
+            <div class="row">
+              <div class="col col-50">
+                <label for="firstName">First Name</label>
+                <input id="firstName" ng-model="firstName" name="firstName" />
+              </div>
+              <div class="col col-50">
+                <label for="lastName">Last Name</label>
+                <input id="lastName" ng-model="lastName" name="lastName" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col-50">
+                <label for="jobTitle">Job Title</label>
+                <input id="jobTitle" ng-model="jobTitle" name="jobTitle" />
+              </div>
+              <div class="col col-50">
+                <label for="yoe">Years Of Experience</label>
+                <input id="yoe" ng-model="yoe" name="yoe" />
+              </div>
+            </div>
+            <div class="btnContainer">
+              <button ng-click="submit()">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="container">
+        <table class="table">
+          <tr>
+            <th>firstName</th>
+            <th>LastName</th>
+            <th>jobTitle</th>
+            <th>yoe</th>
+          </tr>
+
+          <tr ng-repeat="(key, value) in data">
+            <td>{{value.firstName}}</td>
+            <td>{{value.lastName}}</td>
+            <td>{{value.jobTitle}}</td>
+            <td>{{value.yoe}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
